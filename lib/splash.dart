@@ -30,7 +30,6 @@ class Splash extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Container(
-                  // color: Colors.black,
                   width: MediaQuery.of(context).size.width,
                   height: size.height*.55,
                   child: Stack(
