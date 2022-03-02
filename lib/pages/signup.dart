@@ -2,7 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:wolly_vpn/constants/constants.dart';
-
+import 'package:velocity_x/velocity_x.dart';
+import 'package:wolly_vpn/pages/subscribe.dart';
 import 'login.dart';
 
 class Register extends StatefulWidget {
@@ -20,7 +21,13 @@ class _RegisterState extends State<Register> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: colorOne,
-        leading: Icon(Icons.menu),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            "Welloy".text.textStyle(TextStyle(fontFamily: "Roboto",color: borderColor,fontSize: 30,fontWeight: FontWeight.w300)).make(),
+            "VPN".text.textStyle(TextStyle(fontFamily: "Roboto",color: bgOne,fontWeight: FontWeight.bold,fontSize: 30)).make()
+          ],
+        ),
       ),
       body: SafeArea(
         child: Container(
@@ -150,7 +157,9 @@ class _RegisterState extends State<Register> {
                     child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
                             primary: colorTwo, elevation: 1),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=>Subscribe()), (route) => false);
+                        },
                         child: Padding(
                           padding: const EdgeInsets.all(12.0),
                           child:
