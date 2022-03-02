@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wolly_vpn/splash.dart';
+import 'package:wolly_vpn/pages/splash.dart';
 
 void main() {
   runApp(const MyApp());

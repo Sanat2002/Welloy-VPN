@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:wolly_vpn/pages/signup.dart';
+
 import '/constants/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -75,7 +77,7 @@ class Splash extends StatelessWidget {
                           elevation: 0,
                           textStyle: const TextStyle(fontSize: 20)),
                       onPressed: () {
-                        // Navigator.push(context, MaterialPageRoute(builder: (context)=>const SignUp()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>const Register()));
                       },
                       child: const Padding(
                         padding: EdgeInsets.all(14.0),
