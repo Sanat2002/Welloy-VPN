@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:wolly_vpn/constants/constants.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:wolly_vpn/pages/subscribe.dart';
+import 'home.dart';
 import 'login.dart';
 
 class Register extends StatefulWidget {
@@ -158,7 +159,7 @@ class _RegisterState extends State<Register> {
                         style: ElevatedButton.styleFrom(
                             primary: colorTwo, elevation: 1),
                         onPressed: () {
-                          Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=>Subscribe()), (route) => false);
+                          Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=>Home()), (route) => false);
                         },
                         child: Padding(
                           padding: const EdgeInsets.all(12.0),

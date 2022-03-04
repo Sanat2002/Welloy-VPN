@@ -21,7 +21,9 @@ class Subscribe extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 14),
             child: IconButton(
               splashRadius: 1,
-              onPressed: (){},
+              onPressed: (){
+                Navigator.pop(context);
+              },
               icon: Icon(Icons.clear,color: bgOne,size: 39,)
             ),
           )
@@ -89,9 +91,9 @@ class Subscribe extends StatelessWidget {
               ).px(size.width*.2),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(vertical: size.height*.015),
+              padding: EdgeInsets.symmetric(vertical: size.height*.015,horizontal: size.width*.0),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   SvgPicture.asset(
                     "assets/Group.svg",
@@ -100,8 +102,21 @@ class Subscribe extends StatelessWidget {
                   20.widthBox,
                   "Premium Locations".text.textStyle(styleOne).make()
                 ],
-              ).px(size.width*.2),
+              ).px(size.width*.143),
             ),
+            HeightBox(
+              size.height*.18
+            ),
+            ElevatedButton(
+              style: ButtonStyle(
+                side: MaterialStateProperty.all(BorderSide(color: borderColor)),
+                backgroundColor: MaterialStateProperty.all(Colors.transparent)
+              ),
+              onPressed: (){
+
+              }, 
+              child: "Subscribe Now".text.xl2.make()
+            ).wh(size.width*.8, size.height*.07)
           ],
         ),
       ),
