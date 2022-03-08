@@ -2,7 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:wolly_vpn/constants/constants.dart';
-
+import 'package:velocity_x/velocity_x.dart';
+import 'home.dart';
 import 'login.dart';
 
 class Register extends StatefulWidget {
@@ -17,11 +18,7 @@ class _RegisterState extends State<Register> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-
       appBar: appBarOne,
-
-
-
 
       body: SafeArea(
         child: Container(
@@ -151,7 +148,9 @@ class _RegisterState extends State<Register> {
                     child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
                             primary: colorTwo, elevation: 1),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamedAndRemoveUntil(context, '/home', (route) => false);
+                        },
                         child: Padding(
                           padding: const EdgeInsets.all(12.0),
                           child:
@@ -168,11 +167,7 @@ class _RegisterState extends State<Register> {
                               letterSpacing: 0.5)),
                       TextButton(
                           onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const Login()),
-                            );
+                            Navigator.pushNamed(context, '/login');
                           },
                           child: Text("Log In",
                               style: TextStyle(

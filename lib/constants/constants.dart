@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:velocity_x/src/extensions/string_ext.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 Color bgOne = const Color(0xff1D5DFA);
 Color bgTwo = const Color(0xff021241);
 Color btColor = const Color(0xff0066cc);
 Color borderColor = const Color(0xff0F5BCC);
+Color logoColor = const Color(0xffFFC700);
 Color colorOne =const Color(0xff021241);
 Color colorTwo = const Color(0xff002e99);
 
-var textstyleone = TextStyle(fontSize: 15,color: bgOne,fontWeight: FontWeight.w500);
+var textstyleone = TextStyle(fontSize: 15,color: bgOne,fontWeight: FontWeight.bold);
 
 TextStyle styleOne=const TextStyle(
-    fontSize: 20,fontWeight: FontWeight.w500,color: Colors.white);
+
+    fontSize: 24,fontWeight: FontWeight.bold,color: Colors.white);
 
 TextStyle styleTwo= const TextStyle(fontWeight: FontWeight.normal,
     fontSize: 15,color: Colors.white70);
@@ -23,7 +25,7 @@ var appBarOne = AppBar(
   centerTitle: true,
 elevation: 0,
 backgroundColor: colorOne,
-leading:Icon(Icons.menu,color: colorTwo,),
+automaticallyImplyLeading: false,
  title:Row(mainAxisSize: MainAxisSize.min,
    children: [
    "Welloy".text.textStyle(TextStyle(fontFamily: "Roboto",color: borderColor,fontSize: 20,fontWeight: FontWeight.w300)).make(),
@@ -37,7 +39,7 @@ var appBartwo = AppBar(
   centerTitle: true,
 elevation: 0,
 backgroundColor: colorOne,
-leading:Icon(Icons.menu,color: colorTwo,),
+iconTheme: IconThemeData(color: colorTwo,size: 30),
  title:Row(mainAxisSize: MainAxisSize.min,
    children: [
    "Welloy".text.textStyle(TextStyle(fontFamily: "Roboto",color: borderColor,fontSize: 20,fontWeight: FontWeight.w300)).make(),

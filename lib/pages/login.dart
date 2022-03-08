@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:wolly_vpn/constants/constants.dart';
 import 'package:wolly_vpn/pages/signup.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -18,7 +19,6 @@ class _LoginState extends State<Login> {
       resizeToAvoidBottomInset: false,
 
       appBar: appBarOne,
-
 
       body: SafeArea(
         child: Container(
@@ -129,7 +129,7 @@ class _LoginState extends State<Login> {
                           style: TextStyle(color: Colors.white, fontSize: 12)),
                       TextButton(
                           onPressed: () {
-                            Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=>Register()), (route) => false);                            
+                            Navigator.pushNamedAndRemoveUntil(context, "/signup", (route) => false);                       
                           },
                           child: Text(
                             "Sign Up",
