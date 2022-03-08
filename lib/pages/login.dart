@@ -16,11 +16,10 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: colorOne,
-        leading: Icon(Icons.menu),
-      ),
+
+      appBar: appBarOne,
+
+
       body: SafeArea(
         child: Container(
           padding: EdgeInsets.all(35),
