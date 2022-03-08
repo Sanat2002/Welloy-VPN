@@ -18,17 +18,6 @@ class _RegisterState extends State<Register> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      // appBar: AppBar(
-      //   elevation: 0,
-      //   backgroundColor: colorOne,
-      //   title: Row(
-      //     mainAxisAlignment: MainAxisAlignment.center,
-      //     children: [
-      //       "Welloy".text.textStyle(TextStyle(fontFamily: "Roboto",color: borderColor,fontSize: 30,fontWeight: FontWeight.w300)).make(),
-      //       "VPN".text.textStyle(TextStyle(fontFamily: "Roboto",color: bgOne,fontWeight: FontWeight.bold,fontSize: 30)).make()
-      //     ],
-      //   ),
-      // ),
       appBar: appBarOne,
 
       body: SafeArea(
@@ -160,7 +149,7 @@ class _RegisterState extends State<Register> {
                         style: ElevatedButton.styleFrom(
                             primary: colorTwo, elevation: 1),
                         onPressed: () {
-                          Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=>Home()), (route) => false);
+                          Navigator.pushNamedAndRemoveUntil(context, '/home', (route) => false);
                         },
                         child: Padding(
                           padding: const EdgeInsets.all(12.0),
@@ -178,11 +167,7 @@ class _RegisterState extends State<Register> {
                               letterSpacing: 0.5)),
                       TextButton(
                           onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const Login()),
-                            );
+                            Navigator.pushNamed(context, '/login');
                           },
                           child: Text("Log In",
                               style: TextStyle(

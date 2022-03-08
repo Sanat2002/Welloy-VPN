@@ -25,7 +25,7 @@ var appBarOne = AppBar(
   centerTitle: true,
 elevation: 0,
 backgroundColor: colorOne,
-leading:Icon(Icons.menu,color: colorTwo,),
+automaticallyImplyLeading: false,
  title:Row(mainAxisSize: MainAxisSize.min,
    children: [
    "Welloy".text.textStyle(TextStyle(fontFamily: "Roboto",color: borderColor,fontSize: 20,fontWeight: FontWeight.w300)).make(),
@@ -39,7 +39,7 @@ var appBartwo = AppBar(
   centerTitle: true,
 elevation: 0,
 backgroundColor: colorOne,
-leading:Icon(Icons.menu,color: colorTwo,),
+iconTheme: IconThemeData(color: colorTwo,size: 30),
  title:Row(mainAxisSize: MainAxisSize.min,
    children: [
    "Welloy".text.textStyle(TextStyle(fontFamily: "Roboto",color: borderColor,fontSize: 20,fontWeight: FontWeight.w300)).make(),

@@ -17,18 +17,6 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      // appBar: AppBar(
-      //   automaticallyImplyLeading: false,
-      //   elevation: 0,
-      //   backgroundColor: colorOne,
-      //   title: Row(
-      //     mainAxisAlignment: MainAxisAlignment.center,
-      //     children: [
-      //       "Welloy".text.textStyle(TextStyle(fontFamily: "Roboto",color: borderColor,fontSize: 30,fontWeight: FontWeight.w300)).make(),
-      //       "VPN".text.textStyle(TextStyle(fontFamily: "Roboto",color: bgOne,fontWeight: FontWeight.bold,fontSize: 30)).make()
-      //     ],
-      //   ),
-      // ),
 
       appBar: appBarOne,
 
@@ -141,7 +129,7 @@ class _LoginState extends State<Login> {
                           style: TextStyle(color: Colors.white, fontSize: 12)),
                       TextButton(
                           onPressed: () {
-                            Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=>Register()), (route) => false);                            
+                            Navigator.pushNamedAndRemoveUntil(context, "/signup", (route) => false);                       
                           },
                           child: Text(
                             "Sign Up",

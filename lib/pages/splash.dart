@@ -77,7 +77,7 @@ class Splash extends StatelessWidget {
                           elevation: 0,
                           textStyle: const TextStyle(fontSize: 20)),
                       onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>const Register()));
+                        Navigator.pushNamed(context, "/signup");
                       },
                       child: const Padding(
                         padding: EdgeInsets.all(14.0),

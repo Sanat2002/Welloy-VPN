@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:wolly_vpn/pages/home.dart';
 import 'package:wolly_vpn/pages/login.dart';
@@ -7,7 +6,7 @@ import 'package:wolly_vpn/pages/splash.dart';
 import 'package:wolly_vpn/pages/subscribe.dart';
 
 class AppRouter{
-  Route<dynamic> onGenerateRoute(RouteSettings routeSettings){
+  static Route<dynamic> onGenerateRoute(RouteSettings routeSettings){
     switch(routeSettings.name){
       case '/':
         return MaterialPageRoute(builder: (_)=>const Splash());

@@ -3,7 +3,7 @@ import 'package:wolly_vpn/routes/approutes.dart';
 
 
 void main() {
-  runApp(const MyApp());
+  runApp( const MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -19,7 +19,7 @@ class _MyAppState extends State<MyApp> {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      onGenerateRoute: AppRouter().onGenerateRoute,
+      onGenerateRoute: AppRouter.onGenerateRoute,
     );
   }
 }
