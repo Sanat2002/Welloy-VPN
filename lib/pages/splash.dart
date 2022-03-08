@@ -42,7 +42,7 @@ class Splash extends StatelessWidget {
                       ),
                       Positioned(
                         top: size.height*.16,
-                        child: SvgPicture.asset("assets/Vector.svg",height: size.height*.29,)),
+                        child: SvgPicture.asset("assets/Vector.svg",height: size.height*.29, )),
                       Positioned(
                         top: size.height*.48,
                         child: Row(

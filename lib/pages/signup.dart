@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:wolly_vpn/constants/constants.dart';
 import 'package:velocity_x/velocity_x.dart';
-import 'package:wolly_vpn/pages/subscribe.dart';
 import 'home.dart';
 import 'login.dart';
 
@@ -19,17 +18,19 @@ class _RegisterState extends State<Register> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: colorOne,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            "Welloy".text.textStyle(TextStyle(fontFamily: "Roboto",color: borderColor,fontSize: 30,fontWeight: FontWeight.w300)).make(),
-            "VPN".text.textStyle(TextStyle(fontFamily: "Roboto",color: bgOne,fontWeight: FontWeight.bold,fontSize: 30)).make()
-          ],
-        ),
-      ),
+      // appBar: AppBar(
+      //   elevation: 0,
+      //   backgroundColor: colorOne,
+      //   title: Row(
+      //     mainAxisAlignment: MainAxisAlignment.center,
+      //     children: [
+      //       "Welloy".text.textStyle(TextStyle(fontFamily: "Roboto",color: borderColor,fontSize: 30,fontWeight: FontWeight.w300)).make(),
+      //       "VPN".text.textStyle(TextStyle(fontFamily: "Roboto",color: bgOne,fontWeight: FontWeight.bold,fontSize: 30)).make()
+      //     ],
+      //   ),
+      // ),
+      appBar: appBarOne,
+
       body: SafeArea(
         child: Container(
           padding: EdgeInsets.all(35),
