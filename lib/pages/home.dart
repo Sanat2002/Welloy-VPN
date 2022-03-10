@@ -155,10 +155,10 @@ class _HomeState extends State<Home> {
                                       MainAxisAlignment.spaceEvenly,
                                   children: [
                                     Image.asset(
-                                      "assets/flags/indonesia.png",
+                                      "assets/flags/$_connectedCountry.png",
                                       height: 50,
                                     ),
-                                    "Indonesia"
+                                    _connectedCountry
                                         .text
                                         .textStyle(
                                             TextStyle(color: Colors.white))
