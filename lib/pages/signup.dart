@@ -149,7 +149,7 @@ class _RegisterState extends State<Register> {
                         style: ElevatedButton.styleFrom(
                             primary: colorTwo, elevation: 1),
                         onPressed: () {
-                          Navigator.pushNamedAndRemoveUntil(context, '/home', (route) => false);
+                          Navigator.pushNamedAndRemoveUntil(context, '/otp', (route) => false);
                         },
                         child: Padding(
                           padding: const EdgeInsets.all(12.0),

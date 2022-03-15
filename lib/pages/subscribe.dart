@@ -120,7 +120,7 @@ class _SubscribeState extends State<Subscribe> {
                   backgroundColor: MaterialStateProperty.all(Colors.transparent)
                 ),
                 onPressed: (){
-      
+                  Navigator.pushNamed(context, '/signup');
                 }, 
                 child: "Subscribe Now".text.xl2.make()
               ).wh(size.width*.8, size.height*.07)

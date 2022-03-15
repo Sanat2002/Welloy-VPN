@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:wolly_vpn/constants/constants.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:stop_watch_timer/stop_watch_timer.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -15,13 +16,21 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   bool _isConnected = false;
   String _connectedCountry = "";
+  final StopWatchTimer _stopWatchTimer = StopWatchTimer();
 
   setCountry(name){
     _connectedCountry = name;
     _isConnected = true;
+    _stopWatchTimer.onExecute.add(StopWatchExecute.start);
     setState(() {
       
     });
+  }
+
+  @override
+  void dispose() {
+    _stopWatchTimer.dispose();
+    super.dispose();
   }
 
   @override
@@ -125,11 +134,21 @@ class _HomeState extends State<Home> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          "02:23:00"
-                              .text
-                              .textStyle(TextStyle(color: bgOne))
-                              .xl4
-                              .make()
+                          StreamBuilder<int>(
+                            stream: _stopWatchTimer.rawTime,
+                            initialData: 4,
+                            builder: (context,snapshot){
+                              final value = snapshot.data as int;
+                              final displaytime = StopWatchTimer.getDisplayTime(value,hours: true);
+
+                              if(displaytime=="00:00:08.00"){
+                                _stopWatchTimer.onExecute.add(StopWatchExecute.stop);
+                                // setState(() {
+                                //   _isConnected = false;
+                                // });
+                              }
+                              return Text(displaytime,style: TextStyle(color: bgOne,fontSize: 30),);
+                            })
                         ],
                       )),
                   Positioned(
@@ -280,6 +299,7 @@ class _HomeState extends State<Home> {
                                     elevation: 0,
                                     textStyle: const TextStyle(fontSize: 20)),
                                 onPressed: () {
+                                  _stopWatchTimer.onExecute.add(StopWatchExecute.reset);
                                   setState(() {
                                     _isConnected = false;
                                   });

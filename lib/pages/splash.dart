@@ -77,7 +77,7 @@ class Splash extends StatelessWidget {
                           elevation: 0,
                           textStyle: const TextStyle(fontSize: 20)),
                       onPressed: () {
-                        Navigator.pushNamed(context, "/signup");
+                        Navigator.pushNamed(context, "/home");
                       },
                       child: const Padding(
                         padding: EdgeInsets.all(14.0),

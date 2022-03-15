@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wolly_vpn/pages/home.dart';
 import 'package:wolly_vpn/pages/login.dart';
+import 'package:wolly_vpn/pages/otp.dart';
 import 'package:wolly_vpn/pages/signup.dart';
 import 'package:wolly_vpn/pages/splash.dart';
 import 'package:wolly_vpn/pages/subscribe.dart';
@@ -18,6 +19,8 @@ class AppRouter{
         return MaterialPageRoute(builder: (_)=>const Home());
       case '/subscribe':
         return MaterialPageRoute(builder: (_)=>const Subscribe());
+      case '/otp':
+        return MaterialPageRoute(builder: (_)=>const OtpScreen());
 
       default:
         return MaterialPageRoute(builder: (_){
