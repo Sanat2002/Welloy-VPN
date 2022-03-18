@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.wolly_vpn">
+    <uses-permission android:name="android.permission.VIBRATE"/>
    <application
         android:label="wolly_vpn"
         android:name="${applicationName}"

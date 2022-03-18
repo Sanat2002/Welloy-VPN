@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:wolly_vpn/constants/constants.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:stop_watch_timer/stop_watch_timer.dart';
+import 'package:vibration/vibration.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -22,6 +23,7 @@ class _HomeState extends State<Home> {
     _connectedCountry = name;
     _isConnected = true;
     _stopWatchTimer.onExecute.add(StopWatchExecute.start);
+    Vibration.vibrate(duration: 500);
     setState(() {
       
     });
